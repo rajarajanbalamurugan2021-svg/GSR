@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg: #080d18;
+  --color-surface: #0e1626;
+  --color-card: #131f33;
+  --color-card-hover: #172540;
+  --color-border: #1d2e48;
+  --color-border-light: #243659;
+  --color-accent: #3b9eff;
+  --color-accent-dark: #1a7de0;
+  --color-success: #22d3a0;
+  --color-danger: #f4476b;
+  --color-warning: #f59e0b;
+  --color-info: #a78bfa;
+  --color-orange: #fb923c;
+  --color-text: #e2eaf8;
+  --color-text-sub: #8aa4c8;
+  --color-text-muted: #4d6a8a;
+  --color-sidebar: #0a1120;
+  --color-sidebar-border: #162035;
+  --color-input: #0c1828;
+  --color-input-border: #1d2e48;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+  }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.25s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease forwards;
+}
